@@ -1,7 +1,6 @@
 package com.example.cxfclient;
 
 import org.apache.cxf.endpoint.Client;
-import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;
 
 public class CxfClient {
@@ -9,6 +8,18 @@ public class CxfClient {
     public static void main(String[] args) {
         main1();
     }
+    /**
+     *  功能描述: 动态调用
+     *  PS:调用webservice可以通过
+     *      生成客户端文件,这种方式需要将代理文件放入项目中,调用超级简单但是很少用
+     *      用HttpClient发送soap报文,需要区分soap版本,需要组装请求报文,复用性和控制性(超时时间等)好
+     *      cxf静态调用,类似生成客户端文件,但只需要服务端通过server类(没用过,简单查了一下),通过JaxWsProxyFactoryBean类
+     *      cxf动态调用JaxWsDynamicClientFactory.newInstance(),只要提供接口名和路径就可以调用.
+     *
+     * @Author: cy
+     * @Date: 2019-07-23 11:52
+     * @Version 1.0
+     **/
     public static void main1() {
 
         // 接口地址

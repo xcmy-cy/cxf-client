@@ -1,0 +1,2 @@
+# cxf-client
+这是一个SpringBoot整合CXF调用WebService接口服务的客户端小demo

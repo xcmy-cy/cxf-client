@@ -1,4 +1,4 @@
-package com.example.cxfclient;
+package com.xcmy.cxfclient;
 
 import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;
@@ -31,7 +31,7 @@ public class CxfClient {
         JaxWsDynamicClientFactory dcf = JaxWsDynamicClientFactory.newInstance();
         Client client = dcf.createClient(address);
         //指定请求的命名空间和方法名(当服务端接口和实现不在同一个包下必须指定接口的命名空间)
-        QName name = new QName("http://server.cxfserver.example.com/", "getUser");
+        QName name = new QName("http://server.cxfserver.xcmy.com/", "getUser");
 //        当接口和实现在同一个包下 可以直接用方法名
 //        String name = "getUser";
 

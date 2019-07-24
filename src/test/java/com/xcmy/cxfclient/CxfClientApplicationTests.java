@@ -1,4 +1,4 @@
-package com.example.cxfclient;
+package com.xcmy.cxfclient;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
